@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-ink-200;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink-700 antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif text-ink-900;
+  }
+
+  ::selection {
+    @apply bg-navy/10 text-navy-deep;
+  }
+
+  a {
+    @apply underline-offset-4;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme(colors.navy.DEFAULT);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .container-content {
+    @apply mx-auto max-w-content px-6 md:px-10 lg:px-16;
+  }
+
+  .section {
+    @apply py-16 md:py-24 lg:py-30;
+  }
+
+  .eyebrow {
+    @apply text-[0.7rem] tracking-wide3 uppercase text-ink-600 font-medium;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm px-7 py-3.5 text-sm tracking-wide2 uppercase transition-colors duration-250;
+  }
+
+  .btn-primary {
+    @apply btn bg-navy-deep text-paper hover:bg-navy;
+  }
+
+  .btn-secondary {
+    @apply btn border border-ink-900 text-ink-900 hover:bg-ink-900 hover:text-paper;
+  }
+
+  .btn-ghost {
+    @apply btn text-ink-900 hover:text-navy underline decoration-ink-300 underline-offset-8 hover:decoration-navy;
+  }
+
+  .nav-link {
+    @apply text-[0.8rem] tracking-wide2 uppercase text-ink-700 hover:text-navy transition-colors duration-250;
+  }
+
+  .divider {
+    @apply h-px w-full bg-ink-200;
+  }
+
+  .card {
+    @apply border border-ink-200 bg-paper p-8 md:p-10;
+  }
+
+  .faq-item summary {
+    @apply flex cursor-pointer list-none items-center justify-between gap-6 py-6 font-serif text-lg text-ink-900;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item .faq-icon {
+    @apply relative h-4 w-4 flex-none;
+  }
+
+  .faq-item .faq-icon::before,
+  .faq-item .faq-icon::after {
+    content: "";
+    @apply absolute bg-ink-900 transition-transform duration-250;
+  }
+
+  .faq-item .faq-icon::before {
+    @apply left-0 top-1/2 h-px w-4 -translate-y-1/2;
+  }
+
+  .faq-item .faq-icon::after {
+    @apply left-1/2 top-0 h-4 w-px -translate-x-1/2;
+  }
+
+  .faq-item[open] .faq-icon::after {
+    transform: translateX(-50%) rotate(90deg) scaleY(0);
+  }
+}
