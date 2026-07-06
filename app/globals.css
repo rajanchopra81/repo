@@ -7,8 +7,9 @@
     @apply border-ink-200;
   }
 
-  html {
+ html {
     scroll-behavior: smooth;
+    color-scheme: light only;
   }
 
   body {
