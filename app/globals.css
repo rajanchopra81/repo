@@ -61,7 +61,7 @@
   }
 
   .btn-ghost {
-    @apply btn text-ink-900 hover:text-navy underline decoration-ink-300 underline-offset-8 hover:decoration-navy;
+    @apply btn text-ink-900 hover:text-navy underline decoration-ink-200 underline-offset-8 hover:decoration-navy;
   }
 
   .nav-link {
