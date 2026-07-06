@@ -5,12 +5,6 @@ type Props = {
   aspect?: string;
   tone?: "cream" | "navy" | "stone";
   className?: string;
-  /**
-   * Optional path to a real photo (e.g. "/images/portrait-hero.jpg"),
-   * relative to the /public folder. Once this is set, the elegant
-   * placeholder box below is replaced by the actual photograph — no
-   * other code changes are needed.
-   */
   src?: string;
   sizes?: string;
 };
@@ -32,6 +26,24 @@ export default function ImagePlaceholder({
   if (src) {
     return (
       <div className={`${aspect} relative w-full overflow-hidden ${className}`}>
-        <Image
-          src={src}
-    
+        <Image src={src} alt={label} fill sizes={sizes} className="object-cover" />
+      </div>
+    );
+  }
+
+  return (
+    <div
+      role="img"
+      aria-label={label}
+      className={`${aspect} ${tones[tone]} flex w-full items-end justify-start border border-ink-200/60 p-6 ${className}`}
+      style={{
+        backgroundImage:
+          tone === "navy"
+            ? undefined
+            : "repeating-linear-gradient(135deg, rgba(11,23,48,0.04) 0px, rgba(11,23,48,0.04) 1px, transparent 1px, transparent 14px)",
+      }}
+    >
+      <span className="text-[0.7rem] uppercase tracking-wide2">{label}</span>
+    </div>
+  );
+}
