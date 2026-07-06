@@ -62,6 +62,7 @@ export const viewport = {
   themeColor: "#FFFFFF",
   width: "device-width",
   initialScale: 1,
+  colorScheme: "light",
 };
 
 const physicianJsonLd = {
