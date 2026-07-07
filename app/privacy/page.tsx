@@ -164,8 +164,8 @@ export default function PrivacyPage() {
             <h2 className="font-serif text-xl text-ink-900">Contact Us</h2>
             <p className="mt-3">
               Questions about this Privacy Policy may be directed to{" "}
-              <a href="mailto:info@drrajanchopra.com" className="underline hover:text-navy">
-                info@drrajanchopra.com
+              <a href="mailto:Rajan@drrajanchopra.com" className="underline hover:text-navy">
+                Rajan@drrajanchopra.com
               </a>
               .
             </p>
