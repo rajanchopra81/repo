@@ -89,6 +89,7 @@ export default function BrainHealthPage() {
               <ImagePlaceholder
                 label="Minimalist neurology artwork — brain health"
                 aspect="aspect-[3/4]"
+                src="/images/brain-health.jpg"
               />
             </Reveal>
           </div>
