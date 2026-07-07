@@ -45,8 +45,8 @@ export default function Footer() {
             </li>
             <li className="text-ink-600">By appointment, Southern California</li>
             <li>
-              <a href="mailto:info@drrajanchopra.com" className="hover:text-navy">
-                info@drrajanchopra.com
+              <a href="mailto:Rajan@drrajanchopra.com" className="hover:text-navy">
+                Rajan@drrajanchopra.com
               </a>
             </li>
           </ul>
