@@ -74,8 +74,8 @@ export default function AccessibilityPage() {
               If you encounter an accessibility barrier on this Website, or
               if you need assistance accessing any content, please contact
               us at{" "}
-              <a href="mailto:info@drrajanchopra.com" className="underline hover:text-navy">
-                info@drrajanchopra.com
+              <a href="mailto:Rajan@drrajanchopra.com" className="underline hover:text-navy">
+                Rajan@drrajanchopra.com
               </a>
               . Please describe the issue and the page involved, and we
               will work to address it.
