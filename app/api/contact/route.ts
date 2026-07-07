@@ -19,7 +19,7 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify({
         from: "Website Inquiries <onboarding@resend.dev>",
-        to: "Rajan@drrajanchopra.com",
+        to: "rajan@drrajanchopra.com",
         subject: `New inquiry: ${body.reason}`,
         text: `Name: ${body.name}\nEmail: ${body.email}\nPhone: ${body.phone || "Not provided"}\nPreferred contact method: ${body.contactMethod}\n\nMessage:\n${body.message}`,
         reply_to: body.email,
