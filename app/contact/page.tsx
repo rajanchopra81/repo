@@ -92,8 +92,8 @@ export default function ContactPage() {
               <div className="mt-12 space-y-4 border-t border-ink-200 pt-8 text-sm leading-relaxed text-ink-600">
                 <p>
                   <span className="font-medium text-ink-900">Email: </span>
-                  <a href="mailto:info@drrajanchopra.com" className="hover:text-navy">
-                    info@drrajanchopra.com
+                  <a href="mailto:Rajan@drrajanchopra.com" className="hover:text-navy">
+                    Rajan@drrajanchopra.com
                   </a>
                 </p>
                 <p>
