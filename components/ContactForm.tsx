@@ -161,8 +161,8 @@ export default function ContactForm() {
         <p role="alert" className="text-sm text-ink-700">
           Something went wrong sending your message. Please try again, or
           email us directly at{" "}
-          <a href="mailto:info@drrajanchopra.com" className="underline">
-            info@drrajanchopra.com
+          <a href="mailto:Rajan@drrajanchopra.com" className="underline">
+            Rajan@drrajanchopra.com
           </a>
           .
         </p>
