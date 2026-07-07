@@ -186,4 +186,156 @@ export default function HomePage() {
               </div>
             </Reveal>
             <Reveal delay={100}>
-              <div
+              <div className="card h-full bg-paper">
+                <h2 className="text-display-3 font-serif text-ink-900">
+                  Memory &amp; Cognitive Evaluation
+                </h2>
+                <p className="mt-4 leading-relaxed text-ink-600">
+                  Comprehensive assessment of memory concerns and cognitive
+                  change, drawing on clinical evaluation, targeted testing,
+                  and, when appropriate, neuropsychological assessment and
+                  imaging.
+                </p>
+                <Link
+                  href="/services/brain-health"
+                  className="btn-ghost mt-6 inline-flex"
+                >
+                  Learn About Evaluation
+                </Link>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <div className="divider" />
+
+      {/* Expert Second Opinions */}
+      <section className="section">
+        <div className="container-content grid gap-12 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-7">
+            <Reveal>
+              <p className="eyebrow mb-6">Expert Second Opinions</p>
+              <h2 className="text-display-3 font-serif text-ink-900">
+                An independent review before a major decision is made.
+              </h2>
+              <p className="mt-6 max-w-prose leading-relaxed text-ink-600">
+                A second opinion offers a considered, independent
+                assessment of a prior diagnosis, imaging study, or proposed
+                treatment plan — providing clarity before a significant
+                medical decision is finalized.
+              </p>
+            </Reveal>
+          </div>
+          <div className="lg:col-span-4 lg:col-start-9">
+            <Reveal delay={100}>
+              <Link href="/services" className="btn-secondary w-full">
+                Request a Second Opinion
+              </Link>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <div className="divider" />
+
+      {/* House Calls */}
+      <section className="section bg-cream">
+        <div className="container-content grid gap-12 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-7">
+            <Reveal>
+              <p className="eyebrow mb-6">House Calls</p>
+              <h2 className="text-display-3 font-serif text-ink-900">
+                Evaluation and follow-up, without leaving home.
+              </h2>
+              <p className="mt-6 max-w-prose leading-relaxed text-ink-600">
+                For select concierge members, house calls are available
+                throughout Los Angeles, Orange County, and the Inland
+                Empire when clinically appropriate — an option particularly
+                suited to patients managing mobility limitations, acute
+                recovery, or a preference for privacy.
+              </p>
+            </Reveal>
+          </div>
+          <div className="lg:col-span-4 lg:col-start-9">
+            <Reveal delay={100}>
+              <Link href="/contact" className="btn-secondary w-full">
+                View Service Areas
+              </Link>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <div className="divider" />
+
+      {/* Featured Clinical Expertise */}
+      <section className="section">
+        <div className="container-content">
+          <Reveal>
+            <div className="max-w-prose">
+              <p className="eyebrow mb-6">Featured Clinical Expertise</p>
+              <h2 className="text-display-3 font-serif text-ink-900">
+                A defined set of areas, treated with depth.
+              </h2>
+            </div>
+          </Reveal>
+
+          <div className="mt-14 grid gap-px overflow-hidden border border-ink-200 bg-ink-200 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredExpertise.map((item, i) => (
+              <Reveal key={item} delay={i * 60}>
+                <div className="flex h-full items-center bg-paper px-8 py-8">
+                  <span className="font-serif text-lg text-ink-900">
+                    {item}
+                  </span>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Link href="/services" className="btn-ghost mt-10 inline-flex">
+            View All Services
+          </Link>
+        </div>
+      </section>
+
+      <div className="divider" />
+
+      {/* Why Concierge Neurology */}
+      <section className="section bg-cream">
+        <div className="container-content max-w-3xl">
+          <Reveal>
+            <p className="eyebrow mb-6">Why Concierge Neurology</p>
+            <p className="font-serif text-2xl italic leading-snug text-ink-900 md:text-3xl">
+              &ldquo;Medicine practiced well requires time, attention, and
+              continuity — three things a conventional clinic schedule
+              rarely allows. This practice exists to provide all three.&rdquo;
+            </p>
+            <p className="mt-6 text-sm uppercase tracking-wide2 text-ink-600">
+              Dr. Rajan Chopra, Board-Certified Neurologist
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Request Consultation */}
+      <section className="bg-navy-deep py-20 text-navy-mist md:py-28">
+        <div className="container-content max-w-2xl">
+          <h2 className="text-display-3 font-serif text-paper">
+            Begin with a private consultation.
+          </h2>
+          <p className="mt-5 leading-relaxed text-navy-mist/80">
+            Inquiries are reviewed personally by Dr. Chopra&rsquo;s office.
+            All communication is treated with discretion.
+          </p>
+          <Link
+            href="/contact"
+            className="btn mt-9 inline-flex border border-paper/40 text-paper hover:bg-paper hover:text-navy-deep"
+          >
+            Request a Consultation
+          </Link>
+        </div>
+      </section>
+    </>
+  );
+}
