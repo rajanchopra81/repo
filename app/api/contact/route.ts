@@ -1,25 +1,5 @@
 import { NextResponse } from "next/server";
 
-/**
- * INTEGRATION NOTE FOR LAUNCH:
- * This route currently validates and accepts inquiries but does not yet
- * deliver them anywhere. Before publishing, connect a transactional email
- * provider (e.g. Resend, Postmark, SendGrid) or a CRM/inbox integration so
- * that submissions actually reach the practice. A typical implementation:
- *
- *   import { Resend } from "resend";
- *   const resend = new Resend(process.env.RESEND_API_KEY);
- *   await resend.emails.send({
- *     from: "Website Inquiries <noreply@drrajanchopra.com>",
- *     to: "info@drrajanchopra.com",
- *     subject: `New inquiry: ${reason}`,
- *     text: `${name} (${email}, ${phone})\n\n${message}`,
- *   });
- *
- * Until that integration is added, submissions are not sent or stored
- * anywhere and should not be relied upon as a working intake channel.
- */
-
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null);
 
@@ -30,15 +10,33 @@ export async function POST(request: Request) {
     );
   }
 
-  // TODO: wire to a real email/CRM provider before launch (see note above).
-  // eslint-disable-next-line no-console
-  console.log("New contact inquiry received:", {
-    name: body.name,
-    email: body.email,
-    phone: body.phone,
-    reason: body.reason,
-    contactMethod: body.contactMethod,
-  });
+  try {
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "Website Inquiries <onboarding@resend.dev>",
+        to: "Rajan@drrajanchopra.com",
+        subject: `New inquiry: ${body.reason}`,
+        text: `Name: ${body.name}\nEmail: ${body.email}\nPhone: ${body.phone || "Not provided"}\nPreferred contact method: ${body.contactMethod}\n\nMessage:\n${body.message}`,
+        reply_to: body.email,
+      }),
+    });
+
+    if (!res.ok) {
+      const errText = await res.text();
+      // eslint-disable-next-line no-console
+      console.error("Resend error:", errText);
+      return NextResponse.json({ error: "Failed to send." }, { status: 502 });
+    }
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.error("Contact form email error:", err);
+    return NextResponse.json({ error: "Failed to send." }, { status: 502 });
+  }
 
   return NextResponse.json({ ok: true });
 }
