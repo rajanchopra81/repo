@@ -83,17 +83,19 @@ export default function PrivacyPage() {
 
           <div>
             <h2 className="font-serif text-xl text-ink-900">
-              Cookies &amp; Analytics
+              Cookies, Analytics &amp; Advertising
             </h2>
             <p className="mt-3">
-              The Website uses only essential cookies and basic,
-              privacy-focused analytics to understand how visitors use the
-              Website and to improve its performance. We do not use
-              advertising cookies, social-media tracking pixels, or
-              cross-site advertising trackers, and we do not sell or share
-              browsing data for advertising. You can control cookies through
-              your browser settings; disabling cookies may affect certain
-              Website functionality.
+              The Website uses essential cookies, basic privacy-focused
+              analytics, and Google advertising and conversion-measurement
+              tags (Google Ads) to understand how visitors reach and use the
+              Website and to measure the effectiveness of our advertising.
+              These technologies may set cookies and share limited data with
+              Google for measurement and advertising purposes. We do not sell
+              your personal information. You can control cookies through your
+              browser settings, and you can manage Google&rsquo;s use of your
+              data through Google&rsquo;s Ads Settings and privacy tools;
+              disabling cookies may affect certain Website functionality.
             </p>
           </div>
 

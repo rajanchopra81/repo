@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Source_Serif_4, Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
@@ -96,6 +97,19 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${serif.variable} ${sans.variable}`}>
       <body className="flex min-h-screen flex-col font-sans">
+        {/* Google tag (gtag.js) — Google Ads AW-18311420519 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18311420519"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18311420519');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger
