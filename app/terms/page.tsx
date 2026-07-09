@@ -16,7 +16,7 @@ export default function TermsPage() {
           Terms of Use
         </h1>
         <p className="mt-4 text-sm text-ink-500">
-          Effective Date: July 6, 2026
+          Effective Date: July 9, 2026
         </p>
 
         <div className="mt-12 space-y-10 leading-relaxed text-ink-600">
