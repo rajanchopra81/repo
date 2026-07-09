@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 // Google Ads conversion tracking for membership inquiry submissions.
 // To activate: in Google Ads → Tools → Conversions → + New conversion action
@@ -19,6 +20,7 @@ type Status = "idle" | "submitting" | "success" | "error";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
+  const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -34,9 +36,8 @@ export default function ContactForm() {
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error("Request failed");
-      setStatus("success");
       form.reset();
-      // Fire the Google Ads conversion on a successful inquiry submission.
+      // Fire the (optional) event-based Google Ads conversion if a label is set.
       if (
         typeof window !== "undefined" &&
         typeof window.gtag === "function" &&
@@ -44,6 +45,10 @@ export default function ContactForm() {
       ) {
         window.gtag("event", "conversion", { send_to: ADS_CONVERSION_SEND_TO });
       }
+      // Navigate to the dedicated thank-you page. This page loads only after a
+      // successful submission, so a Google Ads page-load conversion set to
+      // /contact/thank-you counts real inquiries (not mere /contact visits).
+      router.push("/contact/thank-you");
     } catch {
       setStatus("error");
     }
