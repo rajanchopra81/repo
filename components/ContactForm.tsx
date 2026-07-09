@@ -2,6 +2,19 @@
 
 import { useState } from "react";
 
+// Google Ads conversion tracking for membership inquiry submissions.
+// To activate: in Google Ads → Tools → Conversions → + New conversion action
+// → Website → create a "Submit lead form" action for AW-18311420519, then copy
+// its "send to" value (format: "AW-18311420519/XXXXXXXXXXXXXXXXX") and paste it
+// below in place of CONVERSION_LABEL. Until then, the conversion stays inert.
+const ADS_CONVERSION_SEND_TO = "AW-18311420519/CONVERSION_LABEL";
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 type Status = "idle" | "submitting" | "success" | "error";
 
 export default function ContactForm() {
@@ -23,6 +36,14 @@ export default function ContactForm() {
       if (!res.ok) throw new Error("Request failed");
       setStatus("success");
       form.reset();
+      // Fire the Google Ads conversion on a successful inquiry submission.
+      if (
+        typeof window !== "undefined" &&
+        typeof window.gtag === "function" &&
+        !ADS_CONVERSION_SEND_TO.endsWith("/CONVERSION_LABEL")
+      ) {
+        window.gtag("event", "conversion", { send_to: ADS_CONVERSION_SEND_TO });
+      }
     } catch {
       setStatus("error");
     }
