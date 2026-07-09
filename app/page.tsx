@@ -27,7 +27,7 @@ const featuredExpertise = [
   "Epilepsy",
   "Headache & Migraine",
   "Movement Disorders",
-  "Expert Second Opinions",
+  "Executive Brain Health",
 ];
 
 export default function HomePage() {
@@ -210,27 +210,30 @@ export default function HomePage() {
 
       <div className="divider" />
 
-      {/* Expert Second Opinions */}
+      {/* Executive Brain Health */}
       <section className="section">
         <div className="container-content grid gap-12 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-7">
             <Reveal>
-              <p className="eyebrow mb-6">Expert Second Opinions</p>
+              <p className="eyebrow mb-6">Executive Brain Health</p>
               <h2 className="text-display-3 font-serif text-ink-900">
-                An independent review before a major decision is made.
+                A comprehensive evaluation of long-term cognitive health.
               </h2>
               <p className="mt-6 max-w-prose leading-relaxed text-ink-600">
-                A second opinion offers a considered, independent
-                assessment of a prior diagnosis, imaging study, or proposed
-                treatment plan — providing clarity before a significant
-                medical decision is finalized.
+                A considered, evidence-based assessment of the factors that
+                shape cognitive health over time — available to members and
+                non-members, for those addressing a specific concern and
+                those who wish to establish a proactive baseline.
               </p>
             </Reveal>
           </div>
           <div className="lg:col-span-4 lg:col-start-9">
             <Reveal delay={100}>
-              <Link href="/services" className="btn-secondary w-full">
-                Request a Second Opinion
+              <Link
+                href="/services/brain-health"
+                className="btn-secondary w-full"
+              >
+                Explore Brain Health
               </Link>
             </Reveal>
           </div>

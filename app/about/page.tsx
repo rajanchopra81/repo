@@ -26,7 +26,7 @@ const expertise = [
   "Neuromuscular Disorders",
   "Balance Disorders",
   "Dizziness",
-  "Expert Second Opinions",
+  "Executive Brain Health",
   "Hospital Care Coordination",
 ];
 
@@ -115,10 +115,9 @@ export default function AboutPage() {
                 <p>
                   Brain health, memory, and cognitive wellness are central to
                   his practice. Dr. Chopra provides comprehensive cognitive
-                  evaluation, considered second opinions, and evidence-based
-                  guidance for patients seeking to understand a memory
-                  concern, address a modifiable risk factor, or maintain
-                  cognitive function as they age.
+                  evaluation and evidence-based guidance for patients seeking
+                  to understand a memory concern, address a modifiable risk
+                  factor, or maintain cognitive function as they age.
                 </p>
                 <p>
                   His practice is built for patients who value privacy,

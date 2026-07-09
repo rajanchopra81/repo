@@ -5,13 +5,13 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Concierge neurology services from Dr. Rajan Chopra, including brain health evaluation, second opinions, hospital coordination, and care for stroke, epilepsy, movement disorders, and more.",
+    "Concierge neurology services from Dr. Rajan Chopra, including brain health evaluation, hospital coordination, and care for stroke, epilepsy, movement disorders, and more.",
 };
 
 const services: { title: string; body: string; href: string }[] = [
   {
     title: "Concierge Neurology",
-    body: "A membership-based model of care providing direct physician access, longer appointments, and continuity across every stage of evaluation and treatment.",
+    body: "A membership-based model providing enhanced physician access, priority scheduling, and personalized care coordination. Professional medical services are billed separately.",
     href: "/membership",
   },
   {
@@ -85,9 +85,9 @@ const services: { title: string; body: string; href: string }[] = [
     href: "/contact",
   },
   {
-    title: "Expert Second Opinions",
-    body: "An independent, considered review of a prior diagnosis, imaging study, or treatment plan before a significant decision is made.",
-    href: "/contact",
+    title: "Executive Brain Health",
+    body: "A comprehensive, evidence-based evaluation of long-term cognitive health, available to members and non-members. Learn more on the Brain Health page.",
+    href: "/services/brain-health",
   },
   {
     title: "Hospital Care Coordination",

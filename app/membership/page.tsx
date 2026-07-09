@@ -5,45 +5,41 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Membership",
   description:
-    "Concierge neurology membership with Dr. Rajan Chopra — direct physician access, longer appointments, and personalized, coordinated neurological care.",
+    "Concierge neurology membership with Dr. Rajan Chopra — enhanced physician access, priority scheduling, and personalized care coordination. Professional medical services are billed separately.",
 };
 
 const includes = [
   {
-    title: "Longer Appointments",
-    body: "Consultations structured to allow full evaluation and conversation, without the constraints of a conventional office visit.",
-  },
-  {
-    title: "Direct Physician Access",
+    title: "Enhanced Physician Access",
     body: "A direct line to Dr. Chopra — not a call center, and not a rotating panel of covering physicians.",
   },
   {
-    title: "Personalized Care Plans",
-    body: "Recommendations built around each member's individual history, goals, and circumstances.",
-  },
-  {
     title: "Priority Scheduling",
-    body: "Timely access to appointments for both new concerns and ongoing management.",
+    body: "Priority access to appointment availability for both new concerns and ongoing management.",
   },
   {
-    title: "Comprehensive Record Review",
-    body: "Careful review of prior evaluations, imaging, and treatment history before a plan is proposed.",
+    title: "Direct Physician Communication",
+    body: "Thoughtful, unhurried communication through a private channel, with the physician who knows your history.",
   },
   {
     title: "Care Coordination",
-    body: "Direct communication with specialists, surgeons, and hospital teams, so care remains cohesive across settings.",
+    body: "Imaging, laboratory testing, and specialist referrals arranged, expedited, and interpreted for you.",
   },
   {
-    title: "Brain Health Planning",
-    body: "Ongoing, individualized attention to memory, cognitive wellness, and healthy cognitive aging.",
+    title: "Medical-Record Organization",
+    body: "Prior evaluations, imaging, and treatment history gathered, organized, and reviewed before a plan is proposed.",
   },
   {
-    title: "Telemedicine",
-    body: "Secure virtual consultation where appropriate, for members who travel or prefer a remote visit.",
+    title: "Hospital Care Coordination",
+    body: "Direct communication with hospital teams, surgeons, and specialists, so care remains cohesive across settings.",
   },
   {
-    title: "House Calls",
-    body: "In-home evaluation and follow-up when clinically appropriate, throughout the practice's service areas.",
+    title: "Concierge Administrative Support",
+    body: "Prescription refill processing, prior-authorization support, and the quiet logistics of complex care.",
+  },
+  {
+    title: "Wellness & Preventive Planning",
+    body: "Ongoing, individualized planning to support long-term brain health and cognitive wellness.",
   },
 ];
 
@@ -60,9 +56,11 @@ export default function MembershipPage() {
             </h1>
             <p className="mt-8 text-lg leading-relaxed text-ink-600">
               Membership is intended for patients and families with
-              ongoing, complex, or evolving neurological needs — providing
-              the continuity, access, and coordination that a single office
-              visit cannot.
+              ongoing, complex, or evolving neurological needs. It provides
+              enhanced physician access, concierge communication,
+              personalized care coordination, and other non-covered
+              concierge services. Professional medical services are billed
+              separately.
             </p>
           </Reveal>
         </div>
@@ -89,6 +87,45 @@ export default function MembershipPage() {
                 </div>
               </Reveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="divider" />
+
+      {/* How care is billed */}
+      <section className="section">
+        <div className="container-content grid gap-16 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <Reveal>
+              <p className="eyebrow mb-6">How Care Is Billed</p>
+              <h2 className="text-display-3 font-serif text-ink-900">
+                Membership and medical care are separate
+              </h2>
+            </Reveal>
+          </div>
+          <div className="lg:col-span-7 lg:col-start-6">
+            <Reveal>
+              <div className="max-w-prose space-y-5 leading-relaxed text-ink-600">
+                <p>
+                  The annual membership covers the non-covered concierge
+                  services described above. Professional medical services —
+                  consultations, follow-up visits, telemedicine, home
+                  visits, and Executive Brain Health evaluations — are billed
+                  separately. You will always know the cost of a service
+                  before it is provided.
+                </p>
+                <p>
+                  Dr. Chopra participates in Medicare, and covered services
+                  are billed to Medicare in the usual way. For commercial
+                  insurance, the practice is out of network and does not bill
+                  carriers directly; a superbill is available on request for
+                  any out-of-network reimbursement. Your membership never
+                  pays for or replaces covered medical care, and membership
+                  is not required to receive it.
+                </p>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>

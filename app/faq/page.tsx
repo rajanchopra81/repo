@@ -38,8 +38,16 @@ const groups: { category: string; items: { q: string; a: string }[] }[] = [
     category: "Membership & Access",
     items: [
       {
-        q: "Does Dr. Chopra accept insurance?",
-        a: "This practice operates on a membership basis rather than through traditional insurance billing. Patients with specific billing or reimbursement questions are encouraged to contact the practice directly.",
+        q: "Does Dr. Chopra accept commercial insurance?",
+        a: "Rajan Chopra, MD is out of network with commercial insurance plans. The practice does not bill commercial insurance directly. Upon request, patients may receive a superbill to submit to their insurance carrier for any available out-of-network reimbursement. Reimbursement is determined solely by the patient's insurance plan.",
+      },
+      {
+        q: "What about Medicare?",
+        a: "Dr. Chopra participates in Medicare. Medicare-covered professional services are billed to Medicare in accordance with Medicare rules. The annual concierge membership fee covers only non-covered concierge services and does not replace or duplicate Medicare-covered medical care.",
+      },
+      {
+        q: "What does the membership include, and how are visits billed?",
+        a: "The annual membership covers non-covered concierge services — enhanced physician access, priority scheduling, direct communication, and care coordination. Professional medical services, such as consultations, follow-up visits, telemedicine, and home visits, are billed separately. The fee schedule is shared during a private conversation, so you have a clear picture before enrolling.",
       },
       {
         q: "How do I become a member?",
@@ -67,8 +75,8 @@ const groups: { category: string; items: { q: string; a: string }[] }[] = [
         a: "An initial consultation includes a detailed discussion of medical history and current concerns, a neurological examination, and time to ask questions before any next steps are recommended.",
       },
       {
-        q: "Can I request a second opinion without becoming a member?",
-        a: "Second opinion consultations are available as a standalone service. Please contact the practice to discuss your specific situation.",
+        q: "Can I see Dr. Chopra without becoming a member?",
+        a: "The Executive Brain Health Assessment is available to non-members as a standalone service. Ongoing private concierge neurology participation is limited and by application. Please contact the practice to discuss your specific situation.",
       },
       {
         q: "What is included in a brain health evaluation?",

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "concierge neurologist",
     "concierge neurology",
     "private neurologist Southern California",
-    "second opinion neurology",
+    "executive brain health",
     "Dr. Rajan Chopra",
   ],
   authors: [{ name: "Rajan Chopra, MD" }],
@@ -71,7 +71,7 @@ const physicianJsonLd = {
   name: "Rajan Chopra, MD",
   medicalSpecialty: "Neurology",
   description:
-    "Board-certified neurologist providing concierge neurology, including brain health and cognitive wellness evaluation, second opinions, and care coordination.",
+    "Board-certified neurologist providing concierge neurology, including brain health and cognitive wellness evaluation, executive brain health, and care coordination.",
   url: siteUrl,
   areaServed: [
     { "@type": "AdministrativeArea", name: "Los Angeles County" },
@@ -81,7 +81,7 @@ const physicianJsonLd = {
   availableService: [
     "Concierge Neurology",
     "Brain Health & Cognitive Wellness",
-    "Expert Second Opinions",
+    "Executive Brain Health",
     "Hospital Care Coordination",
     "Telemedicine",
     "House Calls",
