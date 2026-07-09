@@ -19,7 +19,9 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify({
         from: "Website Inquiries <onboarding@resend.dev>",
-        to: "Rajan@drrajanchopra.com",
+        // Must match the Resend-verified recipient exactly (case-sensitive).
+        // Keep lowercase — do not "fix" the casing; capitalizing breaks delivery.
+        to: "rajan@drrajanchopra.com",
         subject: `New inquiry: ${body.reason}`,
         text: `Name: ${body.name}\nEmail: ${body.email}\nPhone: ${body.phone || "Not provided"}\nPreferred contact method: ${body.contactMethod}\n\nMessage:\n${body.message}`,
         reply_to: body.email,
