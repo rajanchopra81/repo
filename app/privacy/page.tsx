@@ -86,11 +86,14 @@ export default function PrivacyPage() {
               Cookies &amp; Analytics
             </h2>
             <p className="mt-3">
-              The Website may use cookies or similar technologies, and may
-              use third-party analytics tools, to understand how visitors
-              use the Website and to improve its performance. You can
-              control cookies through your browser settings; disabling
-              cookies may affect certain Website functionality.
+              The Website uses only essential cookies and basic,
+              privacy-focused analytics to understand how visitors use the
+              Website and to improve its performance. We do not use
+              advertising cookies, social-media tracking pixels, or
+              cross-site advertising trackers, and we do not sell or share
+              browsing data for advertising. You can control cookies through
+              your browser settings; disabling cookies may affect certain
+              Website functionality.
             </p>
           </div>
 
@@ -116,6 +119,33 @@ export default function PrivacyPage() {
               intended to protect information submitted through this
               Website. No method of transmission over the internet is
               completely secure, and we cannot guarantee absolute security.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-serif text-xl text-ink-900">
+              Data Retention
+            </h2>
+            <p className="mt-3">
+              We retain inquiry submissions only for as long as needed to
+              respond to and evaluate your inquiry, and thereafter as
+              required by law or our records practices. If an inquiry leads
+              to an established physician&ndash;patient relationship, relevant
+              information becomes part of the patient record and is governed
+              by the Notice of Privacy Practices and applicable law rather
+              than this Policy.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-serif text-xl text-ink-900">
+              Breach Notification
+            </h2>
+            <p className="mt-3">
+              In the event of a data breach affecting personal information
+              collected through this Website, we will notify affected
+              individuals and applicable authorities as required by
+              California and federal law.
             </p>
           </div>
 

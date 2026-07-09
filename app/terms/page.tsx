@@ -128,6 +128,22 @@ export default function TermsPage() {
 
           <div>
             <h2 className="font-serif text-xl text-ink-900">
+              Scope; Medical Matters Governed Separately
+            </h2>
+            <p className="mt-3">
+              These Terms govern your use of the Website only. They do not
+              govern the provision of medical care. Any matter relating to
+              medical services — including any dispute concerning care,
+              treatment, or a physician&ndash;patient relationship — is
+              governed solely by the applicable patient agreement, and not by
+              these Terms. Nothing in these Terms requires a website visitor
+              to arbitrate, or otherwise resolve, any medical or
+              professional-liability claim.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-serif text-xl text-ink-900">
               Changes to These Terms
             </h2>
             <p className="mt-3">

@@ -77,8 +77,9 @@ export default function AccessibilityPage() {
               <a href="mailto:Rajan@drrajanchopra.com" className="underline hover:text-navy">
                 Rajan@drrajanchopra.com
               </a>
-              . Please describe the issue and the page involved, and we
-              will work to address it.
+              . Please describe the issue and the page involved. We aim to
+              respond within two business days and to address verified
+              barriers promptly.
             </p>
           </div>
         </div>
