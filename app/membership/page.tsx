@@ -118,11 +118,13 @@ export default function MembershipPage() {
                 <p>
                   Dr. Chopra participates in Medicare, and covered services
                   are billed to Medicare in the usual way. For commercial
-                  insurance, the practice is out of network and does not bill
-                  carriers directly; a superbill is available on request for
-                  any out-of-network reimbursement. Your membership never
-                  pays for or replaces covered medical care, and membership
-                  is not required to receive it.
+                  insurance, the practice is out of network; when appropriate,
+                  professional services may be billed to your plan as an
+                  out-of-network provider, and otherwise they are billed
+                  directly at the practice&rsquo;s self-pay rates. A superbill is
+                  available on request for any out-of-network reimbursement.
+                  Your membership never pays for or replaces covered medical
+                  care, and membership is not required to receive it.
                 </p>
               </div>
             </Reveal>

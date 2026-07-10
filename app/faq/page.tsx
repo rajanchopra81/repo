@@ -39,7 +39,7 @@ const groups: { category: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: "Does Dr. Chopra accept commercial insurance?",
-        a: "Rajan Chopra, MD is out of network with commercial insurance plans. The practice does not bill commercial insurance directly. Upon request, patients may receive a superbill to submit to their insurance carrier for any available out-of-network reimbursement. Reimbursement is determined solely by the patient's insurance plan.",
+        a: "Rajan Chopra, MD is out of network with commercial insurance plans. When appropriate, professional services may be billed to your plan as an out-of-network provider; otherwise they are billed directly to you at the practice's self-pay rates. On request, you may receive a superbill to submit to your carrier for any available out-of-network reimbursement, which is determined solely by your insurance plan.",
       },
       {
         q: "What about Medicare?",
